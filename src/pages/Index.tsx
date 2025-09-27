@@ -75,14 +75,14 @@ const Index = () => {
               <img 
                 src="https://cdn.poehali.dev/files/ab8d087a-c873-400b-ba81-c59b4d8d0b9d.png" 
                 alt="НейроБизнес Крым" 
-                className="h-32 md:h-40 w-auto mx-auto mb-6 drop-shadow-[0_0_20px_rgba(255,0,128,0.3)]"
+                className="h-48 md:h-64 w-auto mx-auto mb-6 drop-shadow-[0_0_30px_rgba(255,0,128,0.5)]"
               />
             </div>
             <h1 className="font-orbitron font-black text-5xl md:text-7xl mb-6 animate-fade-in bg-gradient-to-r from-neon-pink via-neon-purple to-neon-cyan bg-clip-text text-transparent">
               НейроБизнес Крым 2025
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 animate-fade-in max-w-4xl mx-auto font-sora">
-              Первая региональная конференция по ИИ для крымского бизнеса
+              Первая конференция по ИИ для крымского бизнеса
             </p>
             
             <div className="flex flex-col md:flex-row items-center justify-center gap-6 mb-12 text-white">
@@ -515,7 +515,7 @@ const Index = () => {
                 <span className="font-orbitron font-bold">НейроБизнес Крым</span>
               </div>
               <p className="text-gray-300 font-sora">
-                Первая региональная конференция по искусственному интеллекту для крымского бизнеса
+                Первая конференция по искусственному интеллекту для крымского бизнеса
               </p>
             </div>
             
