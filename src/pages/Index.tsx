@@ -14,7 +14,7 @@ const Index = () => {
   });
 
   useEffect(() => {
-    const targetDate = new Date('2024-10-05T23:59:59');
+    const targetDate = new Date('2024-10-03T23:59:59');
     
     const timer = setInterval(() => {
       const now = new Date().getTime();
