@@ -62,16 +62,21 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				navy: {
-					900: '#1e3a8a',
-					800: '#1e40af',
-					700: '#1d4ed8',
-					600: '#2563eb'
+				purple: {
+					900: '#1a1a2e',
+					800: '#16213e',
+					700: '#0f1419',
+					600: '#16213e'
 				},
-				gold: {
-					500: '#ffa726',
-					600: '#ff9800',
-					400: '#ffb74d'
+				accent: {
+					500: '#6366f1',
+					600: '#5c6ac4',
+					400: '#818cf8'
+				},
+				orange: {
+					500: '#ff6b35',
+					600: '#ff5722',
+					400: '#ff8a65'
 				}
 			},
 			borderRadius: {
@@ -80,8 +85,8 @@ export default {
 				sm: 'calc(var(--radius) - 4px)'
 			},
 			fontFamily: {
-				'montserrat': ['Montserrat', 'sans-serif'],
-				'open-sans': ['Open Sans', 'sans-serif']
+				'inter': ['Inter', 'sans-serif'],
+				'montserrat': ['Montserrat', 'sans-serif']
 			},
 			keyframes: {
 				'accordion-down': {
