@@ -34,9 +34,9 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-white font-inter">
+    <div className="min-h-screen bg-dark-900 text-white font-space">
       {/* Fixed Header */}
-      <header className="fixed top-0 w-full bg-white/95 backdrop-blur-sm z-50 border-b border-gray-100">
+      <header className="fixed top-0 w-full bg-dark-800/80 backdrop-blur-lg z-50 border-b border-neon-purple/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center space-x-2">
@@ -45,15 +45,15 @@ const Index = () => {
                 alt="НейроБизнес Крым" 
                 className="h-8 w-auto"
               />
-              <span className="font-montserrat font-bold text-purple-900">НейроБизнес Крым</span>
+              <span className="font-orbitron font-bold text-white">НейроБизнес Крым</span>
             </div>
             <nav className="hidden md:flex space-x-8">
-              <a href="#program" className="text-gray-700 hover:text-primary transition-colors">Программа</a>
-              <a href="#speakers" className="text-gray-700 hover:text-primary transition-colors">Спикеры</a>
-              <a href="#pricing" className="text-gray-700 hover:text-primary transition-colors">Цены</a>
-              <a href="#faq" className="text-gray-700 hover:text-primary transition-colors">FAQ</a>
+              <a href="#program" className="text-gray-300 hover:text-neon-cyan transition-all duration-300 hover:drop-shadow-[0_0_8px_rgba(0,255,255,0.5)]">Программа</a>
+              <a href="#speakers" className="text-gray-300 hover:text-neon-cyan transition-all duration-300 hover:drop-shadow-[0_0_8px_rgba(0,255,255,0.5)]">Спикеры</a>
+              <a href="#pricing" className="text-gray-300 hover:text-neon-cyan transition-all duration-300 hover:drop-shadow-[0_0_8px_rgba(0,255,255,0.5)]">Цены</a>
+              <a href="#faq" className="text-gray-300 hover:text-neon-cyan transition-all duration-300 hover:drop-shadow-[0_0_8px_rgba(0,255,255,0.5)]">FAQ</a>
             </nav>
-            <Button className="bg-gradient-to-r from-accent-500 to-accent-600 hover:from-accent-600 hover:to-accent-500">
+            <Button className="bg-gradient-to-r from-neon-pink to-neon-purple hover:from-neon-purple hover:to-neon-pink transition-all duration-300 shadow-[0_0_20px_rgba(255,0,128,0.3)] hover:shadow-[0_0_30px_rgba(255,0,128,0.5)]">
               Регистрация
             </Button>
           </div>
@@ -61,43 +61,51 @@ const Index = () => {
       </header>
 
       {/* Hero Section */}
-      <section className="pt-16 min-h-screen bg-gradient-to-br from-purple-900 via-purple-800 to-purple-700 relative overflow-hidden">
-        <div className="absolute inset-0 bg-black/20"></div>
+      <section className="relative pt-16 min-h-screen bg-gradient-to-br from-dark-900 via-dark-800 to-dark-700 overflow-hidden">
+        {/* Animated Background */}
+        <div className="absolute inset-0">
+          <div className="absolute top-20 left-10 w-72 h-72 bg-neon-pink/20 rounded-full blur-3xl animate-pulse-glow"></div>
+          <div className="absolute bottom-20 right-10 w-96 h-96 bg-neon-purple/20 rounded-full blur-3xl animate-pulse-glow"></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-neon-cyan/10 rounded-full blur-3xl animate-pulse-glow"></div>
+        </div>
+        
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center justify-center min-h-screen text-center">
           <div className="w-full">
-            <div className="mb-8">
+            <div className="mb-8 animate-fade-in">
               <img 
                 src="https://cdn.poehali.dev/files/ab8d087a-c873-400b-ba81-c59b4d8d0b9d.png" 
                 alt="НейроБизнес Крым" 
-                className="h-24 md:h-32 w-auto mx-auto mb-6"
+                className="h-32 md:h-40 w-auto mx-auto mb-6 drop-shadow-[0_0_20px_rgba(255,0,128,0.3)]"
               />
             </div>
-            <h1 className="font-montserrat font-black text-4xl md:text-6xl text-white mb-6 animate-fade-in">
+            <h1 className="font-orbitron font-black text-5xl md:text-7xl mb-6 animate-fade-in bg-gradient-to-r from-neon-pink via-neon-purple to-neon-cyan bg-clip-text text-transparent">
               НейроБизнес Крым 2025
             </h1>
-            <p className="text-xl md:text-2xl text-gray-200 mb-8 animate-fade-in max-w-4xl mx-auto">
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 animate-fade-in max-w-4xl mx-auto font-sora">
               Первая региональная конференция по ИИ для крымского бизнеса
             </p>
             
-            <div className="flex flex-col md:flex-row items-center justify-center gap-4 mb-12 text-white">
-              <div className="flex items-center gap-2">
-                <Icon name="Calendar" size={20} />
+            <div className="flex flex-col md:flex-row items-center justify-center gap-6 mb-12 text-white">
+              <div className="flex items-center gap-3 bg-dark-700/50 backdrop-blur-sm rounded-lg px-4 py-2 border border-neon-cyan/30">
+                <Icon name="Calendar" size={20} className="text-neon-cyan" />
                 <span className="text-lg">22 октября 2025</span>
               </div>
-              <div className="flex items-center gap-2">
-                <Icon name="MapPin" size={20} />
+              <div className="flex items-center gap-3 bg-dark-700/50 backdrop-blur-sm rounded-lg px-4 py-2 border border-neon-pink/30">
+                <Icon name="MapPin" size={20} className="text-neon-pink" />
                 <span className="text-lg">Крым • ZNClubHouse</span>
               </div>
             </div>
 
             {/* Countdown Timer */}
             <div className="mb-12">
-              <p className="text-orange-400 text-lg mb-4">Предварительная продажа до 5 октября заканчивается через:</p>
+              <p className="text-neon-cyan text-xl mb-6 font-sora font-medium">
+                Льготная предпродажа заканчивается через:
+              </p>
               <div className="flex justify-center gap-4">
                 {Object.entries(timeLeft).map(([unit, value]) => (
-                  <div key={unit} className="bg-white/10 backdrop-blur-sm rounded-lg p-4 min-w-[80px]">
-                    <div className="text-2xl font-bold text-white">{value}</div>
-                    <div className="text-sm text-gray-300 capitalize">{
+                  <div key={unit} className="bg-gradient-to-br from-dark-700 to-dark-600 backdrop-blur-sm rounded-xl p-6 min-w-[90px] border border-neon-purple/30 shadow-[0_0_20px_rgba(139,92,246,0.2)]">
+                    <div className="text-3xl font-bold text-neon-pink font-orbitron">{value}</div>
+                    <div className="text-sm text-gray-400 capitalize font-sora">{
                       unit === 'days' ? 'дней' : 
                       unit === 'hours' ? 'часов' : 
                       unit === 'minutes' ? 'минут' : 'секунд'
@@ -107,11 +115,11 @@ const Index = () => {
               </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-500 text-white font-semibold text-lg px-8 py-4">
-                Купить билет Early Bird за 6 000 ₽
+            <div className="flex flex-col sm:flex-row gap-6 justify-center">
+              <Button size="lg" className="bg-gradient-to-r from-neon-pink to-neon-purple hover:from-neon-purple hover:to-neon-cyan text-white font-bold text-lg px-8 py-4 shadow-[0_0_30px_rgba(255,0,128,0.4)] hover:shadow-[0_0_40px_rgba(255,0,128,0.6)] transition-all duration-300 border border-neon-pink/50">
+                Купить билет льготной предпродажи за 6 000 ₽
               </Button>
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-purple-900 text-lg px-8 py-4">
+              <Button size="lg" variant="outline" className="border-2 border-neon-cyan text-neon-cyan hover:bg-neon-cyan hover:text-dark-900 text-lg px-8 py-4 shadow-[0_0_20px_rgba(0,255,255,0.3)] hover:shadow-[0_0_30px_rgba(0,255,255,0.5)] transition-all duration-300">
                 Смотреть программу
               </Button>
             </div>
@@ -120,10 +128,14 @@ const Index = () => {
       </section>
 
       {/* Value Proposition */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20 bg-gradient-to-br from-dark-800 to-dark-700 relative">
+        <div className="absolute inset-0">
+          <div className="absolute top-0 left-1/4 w-64 h-64 bg-neon-blue/10 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-neon-green/10 rounded-full blur-3xl"></div>
+        </div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="font-montserrat font-bold text-3xl md:text-4xl text-purple-900 mb-4">
+            <h2 className="font-orbitron font-bold text-4xl md:text-5xl mb-4 bg-gradient-to-r from-neon-cyan to-neon-blue bg-clip-text text-transparent">
               За 1 день вы получите практические ИИ-решения для вашего бизнеса
             </h2>
           </div>
@@ -133,33 +145,37 @@ const Index = () => {
               {
                 icon: "FileText",
                 title: "50+ готовых кейсов",
-                description: "Реальные примеры внедрения ИИ в бизнес"
+                description: "Реальные примеры внедрения ИИ в бизнес",
+                color: "from-neon-pink to-neon-purple"
               },
               {
                 icon: "Clock",
                 title: "Персональная 15-минутная ИИ-консультация",
-                description: "Индивидуальный разбор вашей ситуации"
+                description: "Индивидуальный разбор вашей ситуации",
+                color: "from-neon-cyan to-neon-blue"
               },
               {
                 icon: "Monitor",
                 title: "Демозоны по отраслям",
-                description: "Практические демонстрации ИИ-решений"
+                description: "Практические демонстрации ИИ-решений",
+                color: "from-neon-purple to-neon-cyan"
               },
               {
                 icon: "Users",
                 title: "Нетворкинг с 300+ предпринимателями",
-                description: "Знакомства и деловые связи"
+                description: "Знакомства и деловые связи",
+                color: "from-neon-blue to-neon-green"
               }
             ].map((item, index) => (
-              <Card key={index} className="hover:shadow-lg transition-all duration-300 hover:-translate-y-2 border-0 bg-white">
+              <Card key={index} className="group hover:shadow-[0_0_30px_rgba(255,0,128,0.2)] transition-all duration-500 hover:-translate-y-3 bg-gradient-to-br from-dark-700 to-dark-600 border border-gray-700/50 hover:border-neon-pink/30">
                 <CardContent className="p-6 text-center">
-                  <div className="w-16 h-16 bg-gradient-to-br from-accent-500 to-accent-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Icon name={item.icon as any} size={32} className="text-white" />
+                  <div className={`w-16 h-16 bg-gradient-to-br ${item.color} rounded-full flex items-center justify-center mx-auto mb-4 shadow-[0_0_20px_rgba(255,0,128,0.3)] group-hover:shadow-[0_0_30px_rgba(255,0,128,0.5)] transition-all duration-300`}>
+                    <Icon name={item.icon as any} size={28} className="text-white" />
                   </div>
-                  <h3 className="font-montserrat font-semibold text-xl text-purple-900 mb-2">
+                  <h3 className="font-orbitron font-semibold text-xl text-white mb-2">
                     {item.title}
                   </h3>
-                  <p className="text-gray-600">
+                  <p className="text-gray-300 font-sora">
                     {item.description}
                   </p>
                 </CardContent>
@@ -170,10 +186,14 @@ const Index = () => {
       </section>
 
       {/* Target Audience */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20 bg-gradient-to-br from-dark-700 to-dark-800 relative">
+        <div className="absolute inset-0">
+          <div className="absolute top-1/2 left-0 w-48 h-48 bg-neon-purple/10 rounded-full blur-3xl"></div>
+          <div className="absolute top-0 right-0 w-48 h-48 bg-neon-cyan/10 rounded-full blur-3xl"></div>
+        </div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="font-montserrat font-bold text-3xl md:text-4xl text-purple-900 mb-4">
+            <h2 className="font-orbitron font-bold text-4xl md:text-5xl mb-4 bg-gradient-to-r from-neon-purple to-neon-pink bg-clip-text text-transparent">
               Крымский бизнес, который хочет расти с ИИ
             </h2>
           </div>
@@ -184,40 +204,44 @@ const Index = () => {
                 icon: "Bed",
                 title: "Туризм & HoReCa",
                 subtitle: "отели, рестораны",
-                description: "Автоматизация бронирования, персонализация услуг"
+                description: "Автоматизация бронирования, персонализация услуг",
+                gradient: "from-neon-pink via-neon-purple to-neon-cyan"
               },
               {
                 icon: "Grape",
                 title: "Агро & Виноделие",
                 subtitle: "фермеры, винодельни",
-                description: "Прогнозирование урожая, оптимизация производства"
+                description: "Прогнозирование урожая, оптимизация производства",
+                gradient: "from-neon-cyan via-neon-blue to-neon-green"
               },
               {
                 icon: "Building2",
                 title: "Строительство & Девелопмент",
                 subtitle: "застройщики, подрядчики",
-                description: "Планирование проектов, контроль качества"
+                description: "Планирование проектов, контроль качества",
+                gradient: "from-neon-purple via-neon-pink to-neon-cyan"
               },
               {
                 icon: "Store",
                 title: "Малый и средний бизнес",
                 subtitle: "услуги, торговля",
-                description: "Автоматизация процессов, аналитика продаж"
+                description: "Автоматизация процессов, аналитика продаж",
+                gradient: "from-neon-green via-neon-cyan to-neon-blue"
               }
             ].map((item, index) => (
-              <Card key={index} className="group hover:shadow-xl transition-all duration-300 border border-gray-200 hover:border-primary/30">
+              <Card key={index} className="group hover:shadow-[0_0_30px_rgba(139,92,246,0.3)] transition-all duration-500 bg-gradient-to-br from-dark-700 to-dark-600 border border-gray-700/50 hover:border-neon-purple/30">
                 <CardContent className="p-6">
-                  <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-full flex items-center justify-center mb-4">
-                    <Icon name={item.icon as any} size={32} className="text-white" />
+                  <div className={`w-16 h-16 bg-gradient-to-br ${item.gradient} rounded-full flex items-center justify-center mb-4 shadow-[0_0_20px_rgba(139,92,246,0.3)]`}>
+                    <Icon name={item.icon as any} size={28} className="text-white" />
                   </div>
-                  <h3 className="font-montserrat font-semibold text-xl text-purple-900 mb-1">
+                  <h3 className="font-orbitron font-semibold text-xl text-white mb-1">
                     {item.title}
                   </h3>
-                  <p className="text-sm text-gray-500 mb-3">{item.subtitle}</p>
-                  <p className="text-gray-600 mb-4">{item.description}</p>
-                  <a href="#" className="text-accent-500 hover:text-accent-600 font-medium flex items-center gap-1 group-hover:gap-2 transition-all">
+                  <p className="text-sm text-gray-400 mb-3 font-sora">{item.subtitle}</p>
+                  <p className="text-gray-300 mb-4 font-sora">{item.description}</p>
+                  <a href="#" className="text-neon-cyan hover:text-neon-pink font-medium flex items-center gap-1 group-hover:gap-2 transition-all duration-300 font-sora">
                     Узнайте, как ИИ решит ваши задачи
-                    <Icon name="ArrowRight" size={16} />
+                    <Icon name="ArrowRight" size={16} className="group-hover:drop-shadow-[0_0_5px_rgba(0,255,255,0.5)]" />
                   </a>
                 </CardContent>
               </Card>
@@ -227,10 +251,13 @@ const Index = () => {
       </section>
 
       {/* Program Preview */}
-      <section id="program" className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section id="program" className="py-20 bg-gradient-to-br from-dark-800 to-dark-700 relative">
+        <div className="absolute inset-0">
+          <div className="absolute top-0 left-1/3 w-72 h-72 bg-neon-blue/10 rounded-full blur-3xl"></div>
+        </div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="font-montserrat font-bold text-3xl md:text-4xl text-purple-900 mb-4">
+            <h2 className="font-orbitron font-bold text-4xl md:text-5xl mb-4 bg-gradient-to-r from-neon-blue to-neon-cyan bg-clip-text text-transparent">
               Программа конференции
             </h2>
           </div>
@@ -254,22 +281,22 @@ const Index = () => {
                   description: "Практические демонстрации ИИ-решений и персональные консультации"
                 }
               ].map((item, index) => (
-                <div key={index} className="flex items-start gap-6 p-6 bg-white rounded-lg shadow-sm">
-                  <div className="bg-accent-500 text-white px-4 py-2 rounded-lg font-semibold min-w-fit">
+                <div key={index} className="flex items-start gap-6 p-6 bg-gradient-to-r from-dark-700 to-dark-600 rounded-xl border border-gray-700/50 hover:border-neon-blue/30 transition-all duration-300 hover:shadow-[0_0_20px_rgba(59,130,246,0.2)]">
+                  <div className="bg-gradient-to-r from-neon-blue to-neon-cyan text-dark-900 px-4 py-2 rounded-lg font-bold min-w-fit font-orbitron shadow-[0_0_15px_rgba(59,130,246,0.3)]">
                     {item.time}
                   </div>
                   <div>
-                    <h3 className="font-montserrat font-semibold text-xl text-purple-900 mb-2">
+                    <h3 className="font-orbitron font-semibold text-xl text-white mb-2">
                       {item.title}
                     </h3>
-                    <p className="text-gray-600">{item.description}</p>
+                    <p className="text-gray-300 font-sora">{item.description}</p>
                   </div>
                 </div>
               ))}
             </div>
             
             <div className="text-center mt-8">
-              <Button variant="outline" className="border-accent-500 text-accent-500 hover:bg-accent-500 hover:text-white">
+              <Button variant="outline" className="border-2 border-neon-blue text-neon-blue hover:bg-neon-blue hover:text-dark-900 shadow-[0_0_20px_rgba(59,130,246,0.3)] hover:shadow-[0_0_30px_rgba(59,130,246,0.5)] transition-all duration-300">
                 Полная программа PDF
               </Button>
             </div>
@@ -278,10 +305,13 @@ const Index = () => {
       </section>
 
       {/* Speakers Preview */}
-      <section id="speakers" className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section id="speakers" className="py-20 bg-gradient-to-br from-dark-700 to-dark-800 relative">
+        <div className="absolute inset-0">
+          <div className="absolute bottom-0 left-1/4 w-64 h-64 bg-neon-purple/10 rounded-full blur-3xl"></div>
+        </div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="font-montserrat font-bold text-3xl md:text-4xl text-purple-900 mb-4">
+            <h2 className="font-orbitron font-bold text-4xl md:text-5xl mb-4 bg-gradient-to-r from-neon-purple to-neon-pink bg-clip-text text-transparent">
               Эксперты и практики ИИ
             </h2>
           </div>
@@ -307,21 +337,21 @@ const Index = () => {
                 avatar: "👩‍🔬"
               }
             ].map((speaker, index) => (
-              <Card key={index} className="text-center hover:shadow-lg transition-shadow">
+              <Card key={index} className="text-center hover:shadow-[0_0_25px_rgba(255,0,128,0.2)] transition-all duration-500 bg-gradient-to-br from-dark-700 to-dark-600 border border-gray-700/50 hover:border-neon-pink/30">
                 <CardContent className="p-6">
-                  <div className="text-6xl mb-4">{speaker.avatar}</div>
-                  <h3 className="font-montserrat font-semibold text-xl text-purple-900 mb-1">
+                  <div className="text-6xl mb-4 animate-pulse-glow">{speaker.avatar}</div>
+                  <h3 className="font-orbitron font-semibold text-xl text-white mb-1">
                     {speaker.name}
                   </h3>
-                  <p className="text-accent-500 font-medium mb-2">{speaker.company}</p>
-                  <p className="text-gray-600">{speaker.topic}</p>
+                  <p className="text-neon-purple font-medium mb-2 font-sora">{speaker.company}</p>
+                  <p className="text-gray-300 font-sora">{speaker.topic}</p>
                 </CardContent>
               </Card>
             ))}
           </div>
           
           <div className="text-center mt-8">
-            <Button variant="outline" className="border-accent-500 text-accent-500 hover:bg-accent-500 hover:text-white">
+            <Button variant="outline" className="border-2 border-neon-purple text-neon-purple hover:bg-neon-purple hover:text-white shadow-[0_0_20px_rgba(139,92,246,0.3)] hover:shadow-[0_0_30px_rgba(139,92,246,0.5)] transition-all duration-300">
               Все спикеры
             </Button>
           </div>
@@ -329,10 +359,14 @@ const Index = () => {
       </section>
 
       {/* Pricing */}
-      <section id="pricing" className="py-20 bg-purple-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section id="pricing" className="py-20 bg-gradient-to-br from-dark-900 via-dark-800 to-dark-700 relative">
+        <div className="absolute inset-0">
+          <div className="absolute top-0 right-1/4 w-96 h-96 bg-neon-pink/10 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-neon-cyan/10 rounded-full blur-3xl"></div>
+        </div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="font-montserrat font-bold text-3xl md:text-4xl text-white mb-4">
+            <h2 className="font-orbitron font-bold text-4xl md:text-5xl mb-4 bg-gradient-to-r from-neon-pink to-neon-cyan bg-clip-text text-transparent">
               Билеты на конференцию
             </h2>
           </div>
@@ -340,7 +374,7 @@ const Index = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {[
               {
-                name: "Предварительная продажа",
+                name: "Льготная предпродажа",
                 price: "6 000 ₽",
                 originalPrice: "8 000 ₽",
                 popular: true,
@@ -374,31 +408,35 @@ const Index = () => {
                 ]
               }
             ].map((ticket, index) => (
-              <Card key={index} className={`relative ${ticket.popular ? 'ring-2 ring-orange-500' : ''} bg-white`}>
+              <Card key={index} className={`relative ${ticket.popular ? 'ring-2 ring-neon-pink shadow-[0_0_40px_rgba(255,0,128,0.3)]' : 'hover:shadow-[0_0_25px_rgba(139,92,246,0.2)]'} bg-gradient-to-br from-dark-700 to-dark-600 border border-gray-700/50 transition-all duration-500`}>
                 {ticket.popular && (
-                  <Badge className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-orange-500 text-white">
+                  <Badge className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-neon-pink to-neon-purple text-white font-orbitron shadow-[0_0_15px_rgba(255,0,128,0.5)]">
                     ПОПУЛЯРНЫЙ
                   </Badge>
                 )}
                 <CardContent className="p-6 text-center">
-                  <h3 className="font-montserrat font-semibold text-xl text-purple-900 mb-4">
+                  <h3 className="font-orbitron font-semibold text-xl text-white mb-4">
                     {ticket.name}
                   </h3>
                   <div className="mb-6">
                     {ticket.originalPrice && (
                       <div className="text-gray-400 line-through text-lg">{ticket.originalPrice}</div>
                     )}
-                    <div className="text-3xl font-bold text-purple-900">{ticket.price}</div>
+                    <div className="text-3xl font-bold text-neon-cyan font-orbitron">{ticket.price}</div>
                   </div>
                   <ul className="space-y-3 mb-6">
                     {ticket.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center gap-2">
-                        <Icon name="Check" size={16} className="text-green-500" />
-                        <span className="text-gray-600">{feature}</span>
+                        <Icon name="Check" size={16} className="text-neon-green" />
+                        <span className="text-gray-300 font-sora">{feature}</span>
                       </li>
                     ))}
                   </ul>
-                  <Button className={`w-full ${ticket.popular ? 'bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-500 text-white' : 'bg-accent-500 hover:bg-accent-600'}`}>
+                  <Button className={`w-full transition-all duration-300 ${
+                    ticket.popular 
+                      ? 'bg-gradient-to-r from-neon-pink to-neon-purple hover:from-neon-purple hover:to-neon-cyan shadow-[0_0_25px_rgba(255,0,128,0.4)] hover:shadow-[0_0_35px_rgba(255,0,128,0.6)]' 
+                      : 'bg-gradient-to-r from-neon-purple to-neon-blue hover:from-neon-blue hover:to-neon-cyan shadow-[0_0_20px_rgba(139,92,246,0.3)] hover:shadow-[0_0_30px_rgba(139,92,246,0.5)]'
+                  } text-white font-orbitron font-bold`}>
                     Купить билет
                   </Button>
                 </CardContent>
@@ -409,10 +447,13 @@ const Index = () => {
       </section>
 
       {/* FAQ */}
-      <section id="faq" className="py-20 bg-gray-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section id="faq" className="py-20 bg-gradient-to-br from-dark-800 to-dark-700 relative">
+        <div className="absolute inset-0">
+          <div className="absolute top-1/3 right-0 w-64 h-64 bg-neon-cyan/10 rounded-full blur-3xl"></div>
+        </div>
+        <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="font-montserrat font-bold text-3xl md:text-4xl text-purple-900 mb-4">
+            <h2 className="font-orbitron font-bold text-4xl md:text-5xl mb-4 bg-gradient-to-r from-neon-cyan to-neon-blue bg-clip-text text-transparent">
               Часто задаваемые вопросы
             </h2>
           </div>
@@ -444,11 +485,11 @@ const Index = () => {
                 answer: "Все выступления будут на русском языке. При необходимости предоставляется синхронный перевод."
               }
             ].map((item, index) => (
-              <AccordionItem key={index} value={`item-${index}`} className="bg-white rounded-lg border">
-                <AccordionTrigger className="px-6 py-4 font-montserrat font-semibold text-left">
+              <AccordionItem key={index} value={`item-${index}`} className="bg-gradient-to-r from-dark-700 to-dark-600 rounded-lg border border-gray-700/50 hover:border-neon-cyan/30 transition-all duration-300">
+                <AccordionTrigger className="px-6 py-4 font-orbitron font-semibold text-left text-white hover:text-neon-cyan transition-colors">
                   {item.question}
                 </AccordionTrigger>
-                <AccordionContent className="px-6 pb-4 text-gray-600">
+                <AccordionContent className="px-6 pb-4 text-gray-300 font-sora">
                   {item.answer}
                 </AccordionContent>
               </AccordionItem>
@@ -458,8 +499,11 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-purple-900 text-white py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <footer className="bg-gradient-to-br from-dark-900 to-dark-800 text-white py-12 relative">
+        <div className="absolute inset-0">
+          <div className="absolute top-0 left-1/2 w-72 h-72 bg-neon-purple/5 rounded-full blur-3xl"></div>
+        </div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div>
               <div className="flex items-center space-x-2 mb-4">
@@ -468,16 +512,16 @@ const Index = () => {
                   alt="НейроБизнес Крым" 
                   className="h-8 w-auto"
                 />
-                <span className="font-montserrat font-bold">НейроБизнес Крым</span>
+                <span className="font-orbitron font-bold">НейроБизнес Крым</span>
               </div>
-              <p className="text-gray-300">
+              <p className="text-gray-300 font-sora">
                 Первая региональная конференция по искусственному интеллекту для крымского бизнеса
               </p>
             </div>
             
             <div>
-              <h3 className="font-montserrat font-semibold mb-4">Контакты</h3>
-              <div className="space-y-2 text-gray-300">
+              <h3 className="font-orbitron font-semibold mb-4">Контакты</h3>
+              <div className="space-y-2 text-gray-300 font-sora">
                 <p>📧 info@neurobusiness-crimea.ru</p>
                 <p>📱 +7 (978) 123-45-67</p>
                 <p>📍 г. Симферополь, ZNClubHouse</p>
@@ -485,23 +529,23 @@ const Index = () => {
             </div>
             
             <div>
-              <h3 className="font-montserrat font-semibold mb-4">Социальные сети</h3>
+              <h3 className="font-orbitron font-semibold mb-4">Социальные сети</h3>
               <div className="flex space-x-4">
-                <a href="#" className="text-gray-300 hover:text-white transition-colors">
+                <a href="#" className="text-gray-300 hover:text-neon-cyan transition-all duration-300 hover:drop-shadow-[0_0_8px_rgba(0,255,255,0.5)]">
                   <Icon name="MessageCircle" size={24} />
                 </a>
-                <a href="#" className="text-gray-300 hover:text-white transition-colors">
+                <a href="#" className="text-gray-300 hover:text-neon-pink transition-all duration-300 hover:drop-shadow-[0_0_8px_rgba(255,0,128,0.5)]">
                   <Icon name="Send" size={24} />
                 </a>
-                <a href="#" className="text-gray-300 hover:text-white transition-colors">
+                <a href="#" className="text-gray-300 hover:text-neon-purple transition-all duration-300 hover:drop-shadow-[0_0_8px_rgba(139,92,246,0.5)]">
                   <Icon name="Youtube" size={24} />
                 </a>
               </div>
             </div>
           </div>
           
-          <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-300">
-            <p>&copy; 2025 НейроБизнес Крым. Все права защищены.</p>
+          <div className="border-t border-gray-700/50 mt-8 pt-8 text-center text-gray-400">
+            <p className="font-sora">&copy; 2025 НейроБизнес Крым. Все права защищены.</p>
           </div>
         </div>
       </footer>
