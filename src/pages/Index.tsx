@@ -14,9 +14,9 @@ const Index = () => {
   });
 
   useEffect(() => {
-    const targetDate = new Date('2024-10-03T23:59:59');
+    const targetDate = new Date('2025-10-15T23:59:59');
     
-    const timer = setInterval(() => {
+    const updateTimer = () => {
       const now = new Date().getTime();
       const distance = targetDate.getTime() - now;
       
@@ -27,8 +27,19 @@ const Index = () => {
           minutes: Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
           seconds: Math.floor((distance % (1000 * 60)) / 1000)
         });
+      } else {
+        setTimeLeft({
+          days: 0,
+          hours: 0,
+          minutes: 0,
+          seconds: 0
+        });
       }
-    }, 1000);
+    };
+
+    // Обновляем таймер сразу, не ждем секунду
+    updateTimer();
+    const timer = setInterval(updateTimer, 1000);
 
     return () => clearInterval(timer);
   }, []);
